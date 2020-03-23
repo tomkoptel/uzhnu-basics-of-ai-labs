@@ -22,13 +22,14 @@ jobs:
         java-version: 1.8
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
-    # ENABLES GRADLE CACHING https://github.com/actions/cache
     - name: Cache Gradle
       uses: actions/cache@v1.1.2
+      id: cache
       with:
         path: ~/.gradle/caches
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
         restore-keys: |
           ${{ runner.os }}-gradle-
+    - name: Build with Gradle
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: ./gradlew build
