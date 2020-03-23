@@ -23,7 +23,6 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Store Gradle Binnary
-      id: gradle_binnary
       uses: actions/cache@v1
       with:
         path: ~/.gradle/wrapper
@@ -32,7 +31,6 @@ jobs:
           ${{ runner.os }}-gradle-
     - name: Store Gradle Caches
       uses: actions/cache@v1.1.2
-      if: steps.gradle_binnary.outputs.cache-hit != 'true'
       with:
         path: ~/.gradle/caches
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
