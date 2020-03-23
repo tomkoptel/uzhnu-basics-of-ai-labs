@@ -31,5 +31,4 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gradle-
     - name: Build with Gradle
-      if: steps.cache.outputs.cache-hit != 'true'
       run: ./gradlew build
