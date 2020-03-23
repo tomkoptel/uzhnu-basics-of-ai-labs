@@ -5,6 +5,7 @@ package uzhnu.edu.bai.dialog
 
 class Library {
     fun someLibraryMethod(): Boolean {
+        // dummy comment
         return true
     }
 }
