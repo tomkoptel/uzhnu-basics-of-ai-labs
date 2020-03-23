@@ -22,13 +22,22 @@ jobs:
         java-version: 1.8
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Cache Gradle
+    - name: Restore Gradle Caches
       uses: actions/cache@v1.1.2
-      id: cache
+      with:
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+    - name: Store Gradle Binnary
+      id: gradle_binnary
+      uses: actions/cache@v1
+      with:
+        path: ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
+    - name: Store Gradle Caches
+      uses: actions/cache@v1.1.2
+      if: steps.gradle_binnary.outputs.cache-hit != 'true'
       with:
         path: ~/.gradle/caches
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
-        restore-keys: |
-          ${{ runner.os }}-gradle-
     - name: Build with Gradle
       run: ./gradlew build
