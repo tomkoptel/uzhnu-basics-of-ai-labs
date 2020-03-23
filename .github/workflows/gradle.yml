@@ -24,6 +24,7 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    # ENABLES GRADLE CACHING https://github.com/actions/cache
     - name: Cache Gradle
       uses: actions/cache@v1.1.2
       with:
