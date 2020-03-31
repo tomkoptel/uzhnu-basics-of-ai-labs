@@ -12,15 +12,3 @@ incrementIfListEven(List, ResultList, 1) :- incList(List, ResultList, 1).
 incrementIfListEven([Head | Tail], Result) :-
     index([Head | Tail], Index),
     Diff is Index mod 2, incrementIfListEven([Head | Tail], Result, Diff).
-
-% an empty list does not have even elements
-decPair([], []).
-decPair([X0, X1 | L], [X0, X1_INCREMENTED | R]) :-
-    X1_INCREMENTED is X1 - 1,
-    decPair(L, R).
-
-insertInOrederedList(X, [], [X]).
-insertInOrederedList(X, [Y|Rest], [X,Y|Rest]) :-
-    X @< Y, !.
-insertInOrederedList(X, [Y|Rest0], [Y|Rest]) :-
-    insertInOrederedList(X, Rest0, Rest).
