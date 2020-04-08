@@ -3,14 +3,14 @@ package uzhnu.edu.bai.dialog
 class RuleSet {
     private val matchers: MutableList<Comparison> = mutableListOf<Comparison>()
 
-    fun respond(question: String) {
+    fun respond(question: String) : String? {
         for (matcher in matchers) {
             val response = matcher.compare(question)
             if (response != null) {
-                println(response)
-                break
+                return response
             }
         }
+        return null
     }
 
     infix fun exactly(value: String): ExactMatch {
