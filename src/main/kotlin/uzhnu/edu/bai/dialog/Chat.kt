@@ -7,7 +7,7 @@ fun chat(build: Chat.() -> Unit) : Chat {
 class Chat {
     private val matchers: MutableList<Comparison> = mutableListOf<Comparison>()
 
-    fun respond(question: String) : String? {
+    infix fun respond(question: String) : String? {
         for (matcher in matchers) {
             val response = matcher.compare(question)
             if (response != null) {

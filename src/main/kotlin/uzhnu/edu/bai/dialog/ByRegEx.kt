@@ -8,7 +8,7 @@ class ByRegEx(
         val matchResult = regEx.findAll(string).toList()
         return if (matchResult.isNotEmpty()) {
             val result = matchResult.first()
-            val matching = result.groupValues.lastOrNull()
+            val matching = result.groupValues.asSequence().drop(1).joinToString(" ")
             String.format(response, matching)
         } else {
             null
