@@ -15,7 +15,7 @@ class LibraryTest : Spek({
             6 to 10,
             7 to 11
         ).forEach { (msgLength, codewordSize) ->
-            it ("for msgLength=$msgLength should return codewordSize=$codewordSize") {
+            it("for msgLength=$msgLength should return codewordSize=$codewordSize") {
                 codewordSize(msgLength) shouldBeEqualTo codewordSize
             }
         }
@@ -45,11 +45,34 @@ class LibraryTest : Spek({
             (4 to 8) to listOf(5, 6, 7)
         ).forEach { (indices, result) ->
             val (startIndex, endIndex) = indices
-            it ("for startIndex=$startIndex and endIndex=$endIndex should return result=$result") {
+            it("for startIndex=$startIndex and endIndex=$endIndex should return result=$result") {
                 val sequence = parityIndicesSequence(startIndex, endIndex)
                 val actual = sequence.map { it }.toList()
                 actual shouldBeEqualTo result
             }
+        }
+    }
+
+    describe("getDataBit") {
+        it("for word 0010") {
+            val word = BinaryString("0010")
+
+            getDataBit(ind = 2, input = word) shouldBeEqualTo "0"
+            getDataBit(ind = 3, input = word) shouldBeEqualTo "0"
+            getDataBit(ind = 4, input = word) shouldBeEqualTo "0"
+            getDataBit(ind = 5, input = word) shouldBeEqualTo "1"
+            getDataBit(ind = 6, input = word) shouldBeEqualTo "0"
+        }
+
+        it("for word 11011") {
+            val word = BinaryString("11011")
+
+            getDataBit(ind = 2, input = word) shouldBeEqualTo "1"
+            getDataBit(ind = 3, input = word) shouldBeEqualTo "1"
+            getDataBit(ind = 4, input = word) shouldBeEqualTo "1"
+            getDataBit(ind = 5, input = word) shouldBeEqualTo "0"
+            getDataBit(ind = 6, input = word) shouldBeEqualTo "1"
+            getDataBit(ind = 7, input = word) shouldBeEqualTo "1"
         }
     }
 })
