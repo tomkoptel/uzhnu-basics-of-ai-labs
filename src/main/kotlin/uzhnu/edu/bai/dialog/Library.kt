@@ -18,8 +18,8 @@ fun codewordSize(msgLength: Int): Int {
 /**
  * Next, we’ll need a method for calculating parity and data bits at given indexes for a given message:
  */
-fun getParityBit(codeWordIndex: Int, msg: BinaryString) {
-    parityIndicesSequence(codeWordIndex, codewordSize(msg.length))
+fun getParityBit(codeWordIndex: Int, msg: BinaryString): String {
+    return parityIndicesSequence(codeWordIndex, codewordSize(msg.length))
         .map { getDataBit(it, msg).toInt() }
         .reduce { a, b -> a xor b }
         .toString()

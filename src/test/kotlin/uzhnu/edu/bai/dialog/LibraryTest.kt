@@ -75,4 +75,17 @@ class LibraryTest : Spek({
             getDataBit(ind = 7, input = word) shouldBeEqualTo "1"
         }
     }
+
+    describe("getParityBit") {
+        it ("should calculate parity and data bits at given indexes") {
+            val word = BinaryString("0100")
+
+            getParityBit(0, word) shouldBeEqualTo "1"
+            getParityBit(1, word) shouldBeEqualTo "0"
+            getParityBit(2, word) shouldBeEqualTo "0"
+            getParityBit(3, word) shouldBeEqualTo "1"
+            getParityBit(4, word) shouldBeEqualTo "0"
+            getParityBit(5, word) shouldBeEqualTo "0"
+        }
+    }
 })
