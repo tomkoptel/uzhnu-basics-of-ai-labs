@@ -10,3 +10,12 @@ fun codewordSize(msgLength: Int) : Int {
         .first { r -> msgLength + r + 1 <= (1 shl r) }
     return first + msgLength
 }
+
+fun parityIndicesSequence(start: Int, endEx: Int): Sequence<Int> {
+    return generateSequence(start) {it + 1}
+        .take(endEx - start)
+        .filterIndexed { index, _ ->
+            index %((2 * (start + 1))) < start + 1
+        }
+        .drop(1) // ignore the initial parity bit
+}
