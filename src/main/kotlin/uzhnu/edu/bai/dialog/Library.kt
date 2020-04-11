@@ -26,14 +26,19 @@ fun getParityBit(codeWordIndex: Int, msg: BinaryString) {
 }
 
 fun getDataBit(ind: Int, input: BinaryString): String {
-    return input[ind - Integer.toBinaryString(ind).length].toString()
+    val binaryString = Integer.toBinaryString(ind)
+    val dataBitPosition = ind - binaryString.length
+    return input[dataBitPosition].toString()
 }
 
 fun parityIndicesSequence(start: Int, endEx: Int): Sequence<Int> {
-    return generateSequence(start) { it + 1 }
+    val result = generateSequence(start) { it + 1 }
         .take(endEx - start)
         .filterIndexed { index, _ ->
-            index % ((2 * (start + 1))) < start + 1
+            val startInc = start + 1
+            val startIncMultiplied = startInc * 2
+            val mod = index % startIncMultiplied
+            mod < startInc
         }
-        .drop(1) // ignore the initial parity bit
+    return result.drop(1)
 }

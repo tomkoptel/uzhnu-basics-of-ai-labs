@@ -20,4 +20,36 @@ class LibraryTest : Spek({
             }
         }
     }
+
+    describe("parityIndicesSequence") {
+        listOf(
+            (0 to 1) to emptyList(),
+            (0 to 2) to emptyList(),
+            (0 to 4) to listOf(2),
+            (0 to 5) to listOf(2, 4),
+            (0 to 6) to listOf(2, 4),
+            (0 to 7) to listOf(2, 4, 6),
+            (0 to 8) to listOf(2, 4, 6),
+            (0 to 9) to listOf(2, 4, 6, 8),
+            (0 to 10) to listOf(2, 4, 6, 8),
+            (0 to 11) to listOf(2, 4, 6, 8, 10),
+            (0 to 12) to listOf(2, 4, 6, 8, 10),
+            (0 to 13) to listOf(2, 4, 6, 8, 10, 12),
+            (0 to 14) to listOf(2, 4, 6, 8, 10, 12),
+            (0 to 15) to listOf(2, 4, 6, 8, 10, 12, 14),
+            (0 to 16) to listOf(2, 4, 6, 8, 10, 12, 14),
+            (0 to 17) to listOf(2, 4, 6, 8, 10, 12, 14, 16),
+            (1 to 8) to listOf(2, 5),
+            (2 to 8) to listOf(3, 4),
+            (3 to 8) to listOf(4, 5),
+            (4 to 8) to listOf(5, 6, 7)
+        ).forEach { (indices, result) ->
+            val (startIndex, endIndex) = indices
+            it ("for startIndex=$startIndex and endIndex=$endIndex should return result=$result") {
+                val sequence = parityIndicesSequence(startIndex, endIndex)
+                val actual = sequence.map { it }.toList()
+                actual shouldBeEqualTo result
+            }
+        }
+    }
 })
