@@ -8,10 +8,10 @@ data class EncodedString(private val value: String) {
     val length get() = value.length
 
     fun decode() : BinaryString {
-        return indexesOfInvalidParityBits(this).let { result ->
-            when (result.isEmpty()) {
-                true -> this
-                false -> this.withBitFlippedAt(result.sum() - 1)
+        return indexesOfInvalidParityBits(this).let { indexesOfParityBits ->
+            when (indexesOfParityBits.isEmpty()) {
+                true -> this // valid case
+                false -> this.withBitFlippedAt(indexesOfParityBits.sum() - 1)
             }
         }.let { stripHammingMetadata() }
     }
@@ -28,9 +28,6 @@ data class EncodedString(private val value: String) {
             .joinToString("")
             .let(::BinaryString)
     }
-
-    fun isValid() =
-        indexesOfInvalidParityBits(this).isEmpty()
 
     fun indexesOfInvalidParityBits(input: EncodedString): List<Int> {
         return generateSequence(1) { it * 2 }

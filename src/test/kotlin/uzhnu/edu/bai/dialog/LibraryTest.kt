@@ -25,6 +25,7 @@ object LibraryTest : Spek({
         listOf(
             (0 to 1) to emptyList(),
             (0 to 2) to emptyList(),
+            (0 to 3) to listOf(2),
             (0 to 4) to listOf(2),
             (0 to 5) to listOf(2, 4),
             (0 to 6) to listOf(2, 4),
