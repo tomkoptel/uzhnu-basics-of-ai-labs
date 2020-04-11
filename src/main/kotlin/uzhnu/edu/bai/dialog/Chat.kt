@@ -1,6 +1,10 @@
 package uzhnu.edu.bai.dialog
 
-class RuleSet {
+fun chat(build: Chat.() -> Unit) : Chat {
+    return Chat().apply(build)
+}
+
+class Chat {
     private val matchers: MutableList<Comparison> = mutableListOf<Comparison>()
 
     fun respond(question: String) : String? {
