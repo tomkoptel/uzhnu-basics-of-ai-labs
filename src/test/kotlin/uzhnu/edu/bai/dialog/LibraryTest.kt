@@ -4,7 +4,7 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
 
-class LibraryTest : Spek({
+object LibraryTest : Spek({
     describe("codewordSize") {
         listOf(
             1 to 3,
@@ -68,6 +68,17 @@ class LibraryTest : Spek({
         ).forEach { (num, isPowerOfTwo) ->
             it("the num=$num isPowerOfTwo=$isPowerOfTwo") {
                 num.isPowerOfTwo() shouldBeEqualTo isPowerOfTwo
+            }
+        }
+    }
+
+    describe("toBinaryInt") {
+        listOf(
+            '1' to 1,
+            '0' to 0
+        ).forEach { (char, binaryInt) ->
+            it ("should convert char=$char to binaryInt=$binaryInt") {
+                char.toBinaryInt() shouldBeEqualTo binaryInt
             }
         }
     }
