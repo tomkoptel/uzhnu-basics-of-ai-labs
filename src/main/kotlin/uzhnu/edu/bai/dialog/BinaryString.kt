@@ -15,7 +15,7 @@ data class BinaryString(private val value: String) {
     }
 
     /**
-     * Next, we’ll need a method for calculating parity and data bits at given indexes for a given message:
+     * A method for calculating parity bits at given indexes for a given message.
      */
     fun getParityBit(codeWordIndex: Int): String {
         return parityIndicesSequence(codeWordIndex, codewordSize(length))
@@ -24,6 +24,9 @@ data class BinaryString(private val value: String) {
             .toString()
     }
 
+    /**
+     * A method for calculating data bits at given indexes for a given message.
+     */
     fun getDataBit(ind: Int): String {
         val binaryString = Integer.toBinaryString(ind)
         val dataBitPosition = ind - binaryString.length
