@@ -77,7 +77,7 @@ class LibraryTest : Spek({
     }
 
     describe("getParityBit") {
-        it ("should calculate parity and data bits at given indexes") {
+        it("should calculate parity and data bits at given indexes") {
             val word = BinaryString("0100")
 
             getParityBit(0, word) shouldBeEqualTo "1"
@@ -86,6 +86,25 @@ class LibraryTest : Spek({
             getParityBit(3, word) shouldBeEqualTo "1"
             getParityBit(4, word) shouldBeEqualTo "0"
             getParityBit(5, word) shouldBeEqualTo "0"
+        }
+    }
+
+    describe("isPowerOfTwo") {
+        listOf(
+            0 to false,
+            1 to true,
+            2 to true,
+            4 to true,
+            8 to true,
+            16 to true,
+            32 to true,
+            64 to true,
+            128 to true,
+            256 to true
+        ).forEach { (num, isPowerOfTwo) ->
+            it("the num=$num isPowerOfTwo=$isPowerOfTwo") {
+                num.isPowerOfTwo() shouldBeEqualTo isPowerOfTwo
+            }
         }
     }
 })

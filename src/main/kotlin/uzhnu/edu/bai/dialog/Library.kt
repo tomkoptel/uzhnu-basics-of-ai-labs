@@ -42,3 +42,5 @@ fun parityIndicesSequence(start: Int, endEx: Int): Sequence<Int> {
         }
     return result.drop(1)
 }
+
+internal fun Int.isPowerOfTwo() = this != 0 && this and this - 1 == 0
