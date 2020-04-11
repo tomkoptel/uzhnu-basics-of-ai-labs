@@ -53,42 +53,6 @@ class LibraryTest : Spek({
         }
     }
 
-    describe("getDataBit") {
-        it("for word 0010") {
-            val word = BinaryString("0010")
-
-            getDataBit(ind = 2, input = word) shouldBeEqualTo "0"
-            getDataBit(ind = 3, input = word) shouldBeEqualTo "0"
-            getDataBit(ind = 4, input = word) shouldBeEqualTo "0"
-            getDataBit(ind = 5, input = word) shouldBeEqualTo "1"
-            getDataBit(ind = 6, input = word) shouldBeEqualTo "0"
-        }
-
-        it("for word 11011") {
-            val word = BinaryString("11011")
-
-            getDataBit(ind = 2, input = word) shouldBeEqualTo "1"
-            getDataBit(ind = 3, input = word) shouldBeEqualTo "1"
-            getDataBit(ind = 4, input = word) shouldBeEqualTo "1"
-            getDataBit(ind = 5, input = word) shouldBeEqualTo "0"
-            getDataBit(ind = 6, input = word) shouldBeEqualTo "1"
-            getDataBit(ind = 7, input = word) shouldBeEqualTo "1"
-        }
-    }
-
-    describe("getParityBit") {
-        it("should calculate parity and data bits at given indexes") {
-            val word = BinaryString("0100")
-
-            getParityBit(0, word) shouldBeEqualTo "1"
-            getParityBit(1, word) shouldBeEqualTo "0"
-            getParityBit(2, word) shouldBeEqualTo "0"
-            getParityBit(3, word) shouldBeEqualTo "1"
-            getParityBit(4, word) shouldBeEqualTo "0"
-            getParityBit(5, word) shouldBeEqualTo "0"
-        }
-    }
-
     describe("isPowerOfTwo") {
         listOf(
             0 to false,
