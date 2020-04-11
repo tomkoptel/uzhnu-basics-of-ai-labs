@@ -41,6 +41,7 @@ object LibraryTest : Spek({
             (0 to 16) to listOf(2, 4, 6, 8, 10, 12, 14),
             (0 to 17) to listOf(2, 4, 6, 8, 10, 12, 14, 16),
             (1 to 8) to listOf(2, 5, 6),
+            (1 to 12) to listOf(2, 5, 6, 9, 10),
             (2 to 8) to listOf(3, 4),
             (3 to 8) to listOf(4, 5, 6),
             (4 to 8) to listOf(5, 6, 7)
