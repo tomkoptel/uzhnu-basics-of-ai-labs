@@ -1,4 +1,4 @@
-package uzhnu.edu.bai.dialog
+package uzhnu.edu.toie.hamming
 
 /**
  * Strings represents encoded messages

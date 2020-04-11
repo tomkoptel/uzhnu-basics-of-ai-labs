@@ -1,4 +1,4 @@
-package uzhnu.edu.bai.dialog
+package uzhnu.edu.toie.hamming
 
 import org.amshove.kluent.shouldBeEqualTo
 import org.spekframework.spek2.Spek

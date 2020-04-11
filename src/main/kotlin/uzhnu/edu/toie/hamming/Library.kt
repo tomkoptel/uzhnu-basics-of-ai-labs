@@ -1,4 +1,4 @@
-package uzhnu.edu.bai.dialog
+package uzhnu.edu.toie.hamming
 
 /**
  * We’ll need a method for calculating the encoded codeword size
