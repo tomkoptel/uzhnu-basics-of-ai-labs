@@ -6,9 +6,13 @@ package uzhnu.edu.bai.dialog
  * number of parity pairs that can cover the given message.
  */
 fun codewordSize(msgLength: Int): Int {
-    val first = generateSequence(2) { it + 1 }
-        .first { r -> msgLength + r + 1 <= (1 shl r) }
-    return first + msgLength
+    val parityPair = generateSequence(2) { it + 1 }
+        .first { r ->
+            val right = msgLength + r + 1
+            val left = 1 shl r
+            right <= left
+        }
+    return parityPair + msgLength
 }
 
 /**
