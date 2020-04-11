@@ -57,7 +57,12 @@ object BinaryStringTest : Spek({
             "1101111" to "10101011111",
             "1100100" to "11111001100",
             "1100101" to "00111000101",
-            "10011010" to "011100101010"
+            "10011010" to "011100101010",
+            "0" to "000",
+            "00" to "00000",
+            "000" to "000000",
+            "0000" to "0000000",
+            "00000" to "000000000"
         ).forEach { (binaryWord, encodeWord) ->
             it ("should encode '$binaryWord' to '$encodeWord'") {
                 BinaryString(binaryWord).encode() shouldBeEqualTo EncodedString(encodeWord)
