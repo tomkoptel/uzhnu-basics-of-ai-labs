@@ -6,7 +6,7 @@ import org.spekframework.spek2.style.specification.describe
 
 object HuffmanTest2 : Spek({
     describe("buildATree") {
-        val frequencies: List<Pair<Char, Int>> = listOf(
+        val frequencies1: List<Pair<Char, Int>> = listOf(
             'A' to 10,
             'E' to 15,
             'I' to 12,
@@ -16,8 +16,8 @@ object HuffmanTest2 : Spek({
             '0' to 1
         )
 
-        it("for frequencies=$frequencies") {
-            val table = FrequencyTable.create(frequencies)
+        it("for frequencies=$frequencies1") {
+            val table = FrequencyTable.create(frequencies1)
 
             val expected = SubTree2.NonEmpty(
                 head = ParentNode(weight = 58,
@@ -40,6 +40,44 @@ object HuffmanTest2 : Spek({
                                     right = ChildNode(value = 'S', weight = 3)))
                         ),
                         right = ChildNode(value = 'E', weight = 15)
+                    )
+                ),
+                table = FrequencyTable.EMPTY
+            )
+            buildATree(table) shouldBeEqualTo expected
+        }
+
+        val frequencies2: List<Pair<Char, Int>> = listOf(
+            'A' to 10,
+            'B' to 16,
+            'C' to 3,
+            'E' to 1,
+            'D' to 4,
+            'F' to 9
+        )
+
+        it("for frequencies=$frequencies2") {
+            val table = FrequencyTable.create(frequencies2)
+            val expected = SubTree2.NonEmpty(
+                head = ParentNode(
+                    weight = 43,
+                    left = ChildNode(value = 'B', weight = 16),
+                    right = ParentNode(
+                        weight = 27,
+                        left = ParentNode(
+                            weight = 17,
+                            left = ChildNode(value = 'F', weight = 9),
+                            right = ParentNode(
+                                weight = 8,
+                                left = ChildNode(value = 'D', weight = 4),
+                                right = ParentNode(
+                                    weight = 4,
+                                    left = ChildNode(value = 'E', weight = 1),
+                                    right = ChildNode(value = 'C', weight = 3)
+                                )
+                            )
+                        ),
+                        right = ChildNode(value = 'A', weight = 10)
                     )
                 ),
                 table = FrequencyTable.EMPTY
