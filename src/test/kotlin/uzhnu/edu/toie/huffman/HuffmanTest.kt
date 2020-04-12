@@ -19,7 +19,7 @@ object HuffmanTest2 : Spek({
         it("for frequencies=$frequencies1") {
             val table = FrequencyTable.create(frequencies1)
 
-            val expected = SubTree2.NonEmpty(
+            val expected = SubTree.NonEmpty(
                 head = ParentNode(weight = 58,
                     left = ParentNode(
                         weight = 25,
@@ -58,7 +58,7 @@ object HuffmanTest2 : Spek({
 
         it("for frequencies=$frequencies2") {
             val table = FrequencyTable.create(frequencies2)
-            val expected = SubTree2.NonEmpty(
+            val expected = SubTree.NonEmpty(
                 head = ParentNode(
                     weight = 43,
                     left = ChildNode(value = 'B', weight = 16),
@@ -86,150 +86,3 @@ object HuffmanTest2 : Spek({
         }
     }
 })
-
-fun buildATree(table: FrequencyTable): SubTree2.NonEmpty {
-    val subTree = table.firstTree()
-    return buildATreeR(subTree).fix()
-}
-
-tailrec fun buildATreeR(previousTree: SubTree2): SubTree2 {
-    return when (previousTree) {
-        is SubTree2.Empty -> previousTree
-        is SubTree2.NonEmpty -> {
-            val previousMaxFrequency = previousTree.fix().table.maxWeight
-
-            val newTree = previousTree.nextSubTree()
-            val newTreeHead = newTree.fix().head
-            val newMaxFrequency = newTree.fix().table.maxWeight
-            val newWeight = newTreeHead.weight
-
-            if (newWeight > previousMaxFrequency && newMaxFrequency != 0) {
-                val leftTree: SubTree2.NonEmpty = buildATree(newTree.fix().table)
-                val leftTreeHead = leftTree.head
-                if (leftTreeHead.weight > newMaxFrequency) {
-                    val parentNode = leftTree.head
-                    val l = parentNode.left
-                    val r = parentNode.right
-                    val combinedWeight = newTreeHead.weight + l.weight
-
-                    val x = ParentNode(
-                        left = newTreeHead,
-                        right = l,
-                        weight = combinedWeight
-                    )
-                    leftTree.copy(
-                        head = ParentNode(
-                            left = r,
-                            right = x,
-                            weight = r.weight + x.weight
-                        )
-                    )
-                } else {
-                    leftTree
-                }
-            } else {
-                buildATreeR(newTree)
-            }
-        }
-    }
-}
-
-sealed class SubTree2 {
-    fun fix(): NonEmpty {
-        return when (this) {
-            is NonEmpty -> this
-            is Empty -> this.head
-        }
-    }
-
-    data class NonEmpty(
-        val head: ParentNode,
-        val table: FrequencyTable
-    ) : SubTree2() {
-        fun nextSubTree(): SubTree2 {
-            return when (table.isEmpty()) {
-                true -> Empty(this)
-                false -> buildNewSubtree()
-            }
-        }
-
-        private fun buildNewSubtree(): NonEmpty {
-            val (newTable, lowestItem) = table.lowestItem()
-            val newHead = ParentNode(
-                left = lowestItem,
-                right = head,
-                weight = lowestItem.weight + head.weight
-            )
-            return NonEmpty(head = newHead, table = newTable)
-        }
-    }
-
-    data class Empty(val head: NonEmpty) : SubTree2()
-}
-
-class FrequencyTable private constructor(
-    val table: List<ChildNode>,
-    val maxWeight: Int
-) {
-    fun firstTree(): SubTree2.NonEmpty {
-        val leftNode = table[0]
-        val rightNode = table[1]
-        val headNode = ParentNode(
-            left = leftNode,
-            right = rightNode,
-            weight = leftNode.weight + rightNode.weight
-        )
-        val minusTwoElements = table.subList(2, table.size)
-        val newTable = recompute(minusTwoElements)
-        return SubTree2.NonEmpty(head = headNode, table = newTable)
-    }
-
-    fun isEmpty() = table.isEmpty()
-
-    fun lowestItem(): Pair<FrequencyTable, ChildNode> {
-        val element = table.first()
-        val withoutFirst = table.subList(1, table.size)
-        return recompute(withoutFirst) to element
-    }
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as FrequencyTable
-
-        if (table != other.table) return false
-        if (maxWeight != other.maxWeight) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        var result = table.hashCode()
-        result = 31 * result + maxWeight
-        return result
-    }
-
-    override fun toString(): String {
-        return "FrequencyTable(table=$table, maxWeight=$maxWeight)"
-    }
-
-    companion object {
-        val EMPTY = FrequencyTable(emptyList(), 0)
-
-        fun recompute(nodes: List<ChildNode>): FrequencyTable {
-            val maxFrequency = computeMaxWeight(nodes)
-            return FrequencyTable(nodes, maxFrequency)
-        }
-
-        fun create(frequencies: List<Pair<Char, Int>>): FrequencyTable {
-            val nodes = frequencies.sortedBy { (_, frequency) -> frequency }.map { it.toNode() }
-            val maxFrequency = computeMaxWeight(nodes)
-            return FrequencyTable(nodes, maxFrequency)
-        }
-
-        private fun computeMaxWeight(frequencies: List<ChildNode>): Int {
-            return frequencies.map { it.weight }.max() ?: 0
-        }
-    }
-}
