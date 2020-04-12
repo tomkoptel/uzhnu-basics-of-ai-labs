@@ -1,5 +1,7 @@
 package uzhnu.edu.toie.huffman
 
+typealias HuffmanTree = SubTree.NonEmpty
+
 sealed class SubTree {
     fun fix(): NonEmpty {
         return when (this) {

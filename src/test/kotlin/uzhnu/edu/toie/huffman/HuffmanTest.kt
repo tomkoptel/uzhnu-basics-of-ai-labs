@@ -19,7 +19,7 @@ object HuffmanTest2 : Spek({
         xit("for frequencies=$frequencies1") {
             val table = FrequencyTable.create(frequencies1)
 
-            val expected = SubTree.NonEmpty(
+            val expected = HuffmanTree(
                 head = ParentNode(weight = 58,
                     left = ParentNode(
                         weight = 25,
@@ -58,7 +58,7 @@ object HuffmanTest2 : Spek({
 
         it("for frequencies=$frequencies2") {
             val table = FrequencyTable.create(frequencies2)
-            val expected = SubTree.NonEmpty(
+            val expected = HuffmanTree(
                 head = ParentNode(
                     weight = 43,
                     left = ChildNode(value = 'B', weight = 16),
@@ -96,30 +96,6 @@ object HuffmanTest2 : Spek({
 
         xit("for frequencies=$frequencies3") {
             val table = FrequencyTable.create(frequencies3)
-            val expected = SubTree.NonEmpty(
-                head = ParentNode(
-                    weight = 43,
-                    left = ChildNode(value = 'B', weight = 16),
-                    right = ParentNode(
-                        weight = 27,
-                        left = ParentNode(
-                            weight = 17,
-                            left = ChildNode(value = 'F', weight = 9),
-                            right = ParentNode(
-                                weight = 8,
-                                left = ChildNode(value = 'D', weight = 4),
-                                right = ParentNode(
-                                    weight = 4,
-                                    left = ChildNode(value = 'E', weight = 1),
-                                    right = ChildNode(value = 'C', weight = 3)
-                                )
-                            )
-                        ),
-                        right = ChildNode(value = 'A', weight = 10)
-                    )
-                ),
-                table = FrequencyTable.EMPTY
-            )
             println(buildATree(table))
         }
     }
