@@ -1,16 +1,16 @@
 package uzhnu.edu.toie.huffman
 
-interface Node
+abstract class Node(open val weight: Int)
 
 data class ChildNode(
     val value: Char,
-    val frequency: Int
-) : Node
+    override val weight: Int
+) : Node(weight)
 
 data class ParentNode(
-    val weight: Int,
+    override val weight: Int,
     val left: Node,
     val right: Node
-) : Node
+) : Node(weight)
 
 fun Pair<Char, Int>.toNode() = ChildNode(first, second)

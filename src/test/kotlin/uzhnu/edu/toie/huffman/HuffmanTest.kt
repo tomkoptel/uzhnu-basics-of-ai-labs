@@ -1,22 +1,50 @@
 package uzhnu.edu.toie.huffman
 
+import org.amshove.kluent.shouldBeEqualTo
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
 
 object HuffmanTest2 : Spek({
-    describe("a") {
-        it("b") {
-            val frequencies: List<Pair<Char, Int>> = listOf(
-                'A' to 10,
-                'E' to 15,
-                'I' to 12,
-                'S' to 3,
-                'T' to 4,
-                'P' to 13,
-                '0' to 1
-            )
+    describe("buildATree") {
+        val frequencies: List<Pair<Char, Int>> = listOf(
+            'A' to 10,
+            'E' to 15,
+            'I' to 12,
+            'S' to 3,
+            'T' to 4,
+            'P' to 13,
+            '0' to 1
+        )
+
+        it("for frequencies=$frequencies") {
             val table = FrequencyTable.createWithNotSorted(frequencies)
-            println(buildATree(table))
+
+            val expected = SubTree2.NonEmpty(
+                head = ParentNode(weight = 58,
+                    left = ParentNode(
+                        weight = 25,
+                        left = ChildNode(value = 'I', weight = 12),
+                        right = ChildNode(value = 'P', weight = 13)
+                    ),
+                    right = ParentNode(
+                        weight = 33,
+                        left = ParentNode(
+                            weight = 18,
+                            left = ChildNode(value = 'A', weight = 10),
+                            right = ParentNode(
+                                weight = 8,
+                                left = ChildNode(value = 'T', weight = 4),
+                                right = ParentNode(
+                                    weight = 4,
+                                    left = ChildNode(value = '0', weight = 1),
+                                    right = ChildNode(value = 'S', weight = 3)))
+                        ),
+                        right = ChildNode(value = 'E', weight = 15)
+                    )
+                ),
+                table = FrequencyTable(table = emptyList(), maxFrequency = 0)
+            )
+            buildATree(table) shouldBeEqualTo expected
         }
     }
 })
@@ -26,10 +54,45 @@ fun buildATree(table: FrequencyTable): SubTree2.NonEmpty {
     return buildATreeR(subTree).fix()
 }
 
-tailrec fun buildATreeR(subTree: SubTree2): SubTree2 {
-    return when (subTree) {
-        is SubTree2.Empty -> subTree
-        is SubTree2.NonEmpty -> buildATreeR(subTree.nextSubTree())
+tailrec fun buildATreeR(previousTree: SubTree2): SubTree2 {
+    return when (previousTree) {
+        is SubTree2.Empty -> previousTree
+        is SubTree2.NonEmpty -> {
+            val previousMaxFrequency = previousTree.maxFrequency
+
+            val newTree = previousTree.nextSubTree()
+            val newTreeHead = newTree.fix().head
+            val newMaxFrequency = newTree.maxFrequency
+            val newWeight = newTreeHead.weight
+
+            if (newWeight > previousMaxFrequency && newMaxFrequency != 0) {
+                val leftTree: SubTree2.NonEmpty = buildATree(newTree.table2)
+                val leftTreeHead = leftTree.head
+                if (leftTreeHead.weight > newMaxFrequency) {
+                    val parentNode = leftTree.head
+                    val l = parentNode.left
+                    val r = parentNode.right
+                    val combinedWeight = newTreeHead.weight + l.weight
+
+                    val x = ParentNode(
+                        left = newTreeHead,
+                        right = l,
+                        weight = combinedWeight
+                    )
+                    leftTree.copy(
+                        head = ParentNode(
+                            left = r,
+                            right = x,
+                            weight = r.weight + x.weight
+                        )
+                    )
+                } else {
+                    leftTree
+                }
+            } else {
+                buildATreeR(newTree)
+            }
+        }
     }
 }
 
@@ -40,6 +103,10 @@ sealed class SubTree2 {
             is Empty -> this.head
         }
     }
+
+    val maxFrequency get() = fix().table.maxFrequency
+
+    val table2 get() = fix().table
 
     data class NonEmpty(
         val head: ParentNode,
@@ -57,7 +124,7 @@ sealed class SubTree2 {
             val newHead = ParentNode(
                 left = lowestItem,
                 right = head,
-                weight = lowestItem.frequency + head.weight
+                weight = lowestItem.weight + head.weight
             )
             return NonEmpty(head = newHead, table = newTable)
         }
@@ -76,7 +143,7 @@ data class FrequencyTable(
         val headNode = ParentNode(
             left = leftNode,
             right = rightNode,
-            weight = leftNode.frequency + rightNode.frequency
+            weight = leftNode.weight + rightNode.weight
         )
         val minusTwoElements = table.subList(2, table.size)
         val newTable = createWithSorted(minusTwoElements)
