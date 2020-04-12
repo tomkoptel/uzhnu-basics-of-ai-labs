@@ -6,32 +6,13 @@ import org.spekframework.spek2.style.specification.describe
 object HuffmanTest2 : Spek({
     describe("a") {
         it("b") {
-//            val frequencies: List<Pair<Char, Int>> = listOf(
-//                'A' to 10,
-//                'E' to 15,
-//                'I' to 12,
-//                'S' to 3,
-//                'T' to 4,
-//                'P' to 13,
-//                '0' to 1
-//            )
-
-            /**
-             * NonEmpty(
-             *  head=ParentNode(
-             *      weight=8,
-             *      left=ChildNode(value=T, frequency=4),
-             *      right=ParentNode(
-             *          weight=4,
-             *          left=ChildNode(value=0, frequency=1),
-             *          right=ChildNode(value=S, frequency=3)
-             *      )
-             *  )
-             *)
-             */
             val frequencies: List<Pair<Char, Int>> = listOf(
+                'A' to 10,
+                'E' to 15,
+                'I' to 12,
                 'S' to 3,
                 'T' to 4,
+                'P' to 13,
                 '0' to 1
             )
             val table = FrequencyTable.createWithNotSorted(frequencies)
