@@ -17,7 +17,7 @@ object HuffmanTest2 : Spek({
         )
 
         it("for frequencies=$frequencies") {
-            val table = FrequencyTable.createWithNotSorted(frequencies)
+            val table = FrequencyTable.create(frequencies)
 
             val expected = SubTree2.NonEmpty(
                 head = ParentNode(weight = 58,
@@ -42,7 +42,7 @@ object HuffmanTest2 : Spek({
                         right = ChildNode(value = 'E', weight = 15)
                     )
                 ),
-                table = FrequencyTable(table = emptyList(), maxFrequency = 0)
+                table = FrequencyTable.EMPTY
             )
             buildATree(table) shouldBeEqualTo expected
         }
@@ -58,15 +58,15 @@ tailrec fun buildATreeR(previousTree: SubTree2): SubTree2 {
     return when (previousTree) {
         is SubTree2.Empty -> previousTree
         is SubTree2.NonEmpty -> {
-            val previousMaxFrequency = previousTree.maxFrequency
+            val previousMaxFrequency = previousTree.fix().table.maxWeight
 
             val newTree = previousTree.nextSubTree()
             val newTreeHead = newTree.fix().head
-            val newMaxFrequency = newTree.maxFrequency
+            val newMaxFrequency = newTree.fix().table.maxWeight
             val newWeight = newTreeHead.weight
 
             if (newWeight > previousMaxFrequency && newMaxFrequency != 0) {
-                val leftTree: SubTree2.NonEmpty = buildATree(newTree.table2)
+                val leftTree: SubTree2.NonEmpty = buildATree(newTree.fix().table)
                 val leftTreeHead = leftTree.head
                 if (leftTreeHead.weight > newMaxFrequency) {
                     val parentNode = leftTree.head
@@ -104,10 +104,6 @@ sealed class SubTree2 {
         }
     }
 
-    val maxFrequency get() = fix().table.maxFrequency
-
-    val table2 get() = fix().table
-
     data class NonEmpty(
         val head: ParentNode,
         val table: FrequencyTable
@@ -133,45 +129,69 @@ sealed class SubTree2 {
     data class Empty(val head: NonEmpty) : SubTree2()
 }
 
-data class FrequencyTable(
-    val table: List<Pair<Char, Int>>,
-    val maxFrequency: Int
+class FrequencyTable private constructor(
+    val table: List<ChildNode>,
+    val maxWeight: Int
 ) {
     fun firstTree(): SubTree2.NonEmpty {
-        val leftNode = table[0].toNode()
-        val rightNode = table[1].toNode()
+        val leftNode = table[0]
+        val rightNode = table[1]
         val headNode = ParentNode(
             left = leftNode,
             right = rightNode,
             weight = leftNode.weight + rightNode.weight
         )
         val minusTwoElements = table.subList(2, table.size)
-        val newTable = createWithSorted(minusTwoElements)
+        val newTable = recompute(minusTwoElements)
         return SubTree2.NonEmpty(head = headNode, table = newTable)
     }
 
     fun isEmpty() = table.isEmpty()
 
     fun lowestItem(): Pair<FrequencyTable, ChildNode> {
-        val element = table.first().toNode()
+        val element = table.first()
         val withoutFirst = table.subList(1, table.size)
-        return createWithSorted(withoutFirst) to element
+        return recompute(withoutFirst) to element
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as FrequencyTable
+
+        if (table != other.table) return false
+        if (maxWeight != other.maxWeight) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = table.hashCode()
+        result = 31 * result + maxWeight
+        return result
+    }
+
+    override fun toString(): String {
+        return "FrequencyTable(table=$table, maxWeight=$maxWeight)"
     }
 
     companion object {
-        fun createWithSorted(frequencies: List<Pair<Char, Int>>): FrequencyTable {
-            val maxFrequency = computeMaxFrequency(frequencies)
-            return FrequencyTable(frequencies, maxFrequency)
+        val EMPTY = FrequencyTable(emptyList(), 0)
+
+        fun recompute(nodes: List<ChildNode>): FrequencyTable {
+            val maxFrequency = computeMaxWeight(nodes)
+            return FrequencyTable(nodes, maxFrequency)
         }
 
-        fun createWithNotSorted(frequencies: List<Pair<Char, Int>>): FrequencyTable {
-            val priorityPairs = frequencies.sortedBy { (_, frequency) -> frequency }
-            val maxFrequency = computeMaxFrequency(priorityPairs)
-            return FrequencyTable(priorityPairs, maxFrequency)
+        fun create(frequencies: List<Pair<Char, Int>>): FrequencyTable {
+            val nodes = frequencies.sortedBy { (_, frequency) -> frequency }.map { it.toNode() }
+            val maxFrequency = computeMaxWeight(nodes)
+            return FrequencyTable(nodes, maxFrequency)
         }
 
-        private fun computeMaxFrequency(frequencies: List<Pair<Char, Int>>): Int {
-            return frequencies.map { (_, f) -> f }.max() ?: 0
+        private fun computeMaxWeight(frequencies: List<ChildNode>): Int {
+            return frequencies.map { it.weight }.max() ?: 0
         }
     }
 }
