@@ -4,7 +4,7 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
 
-object HuffmanTest2 : Spek({
+object TreeBuilderTest : Spek({
     describe("buildATree") {
         val frequencies1: List<Pair<Char, Int>> = listOf(
             'A' to 10,
