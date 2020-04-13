@@ -5,6 +5,41 @@ import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
 
 object WeightTableTest : Spek({
+    describe("buildBinaryDictionary") {
+        it("create binary dictionary for simple case") {
+            val frequencies = mapOf(
+                'E' to 15,
+                'S' to 3
+            )
+            val queue = WeightTable.create(frequencies)
+            queue.buildBinaryDictionary() shouldBeEqualTo mapOf(
+                'S' to "0",
+                'E' to "1"
+            )
+        }
+        it("create binary dictionary for complex case") {
+            val frequencies = mapOf(
+                'A' to 10,
+                'E' to 15,
+                'I' to 12,
+                'S' to 3,
+                'T' to 4,
+                'P' to 13,
+                '0' to 1
+            )
+            val queue = WeightTable.create(frequencies)
+            queue.buildBinaryDictionary() shouldBeEqualTo mapOf(
+                'I' to "00",
+                'P' to "01",
+                'E' to "10",
+                'T' to "1100",
+                '0' to "11010",
+                'S' to "11011",
+                'A' to "111"
+            )
+        }
+    }
+
     describe("create") {
         it("should build priority queue based on weights") {
             val frequencies = mapOf(
@@ -24,7 +59,7 @@ object WeightTableTest : Spek({
                 'S' to 3
             )
             val queue = WeightTable.create(frequencies)
-            val treeHead = queue.buildTreeHead() as ParentNode
+            val treeHead = queue.buildTreeHead()
             treeHead shouldBeEqualTo ParentNode(
                 weight = 18,
                 left = ChildNode(value = 'S', weight = 3),
@@ -44,7 +79,7 @@ object WeightTableTest : Spek({
             )
 
             val queue = WeightTable.create(frequencies)
-            val treeHead = queue.buildTreeHead() as ParentNode
+            val treeHead = queue.buildTreeHead()
 
             treeHead shouldBeEqualTo ParentNode(
                 weight = 58,
