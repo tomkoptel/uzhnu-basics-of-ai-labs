@@ -29,5 +29,3 @@ data class ParentNode(
     val left: Node,
     val right: Node
 ) : Node(weight)
-
-fun Pair<Char, Int>.toNode() = ChildNode(first, second)
