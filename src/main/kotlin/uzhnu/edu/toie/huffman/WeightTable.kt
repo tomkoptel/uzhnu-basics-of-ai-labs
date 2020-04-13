@@ -5,6 +5,9 @@ import java.util.*
 class WeightTable(
     val queue: Queue<Node>
 ) {
+    /**
+     * Builds dictionary with associated binary words with the table.
+     */
     fun buildBinaryDictionary(): Map<Char, String> {
         val dictionary: MutableMap<Char, String> = mutableMapOf()
         buildR(dictionary, buildTreeHead(), "")
@@ -28,6 +31,9 @@ class WeightTable(
         }
     }
 
+    /**
+     * Builds Hoffman Tree. Returns head of the tree.
+     */
     fun buildTreeHead(): ParentNode {
         val internalQueue = PriorityQueue(Node.Ascending).apply { addAll(queue) }
 
