@@ -8,6 +8,15 @@ sealed class Node(open val weight: Int) {
             return nodeA.weight.compareTo(nodeB.weight)
         }
     }
+
+    operator fun plus(right: Node) : Node {
+        val left = this
+        return ParentNode(
+            left = left,
+            right = right,
+            weight = left.weight + right.weight
+        )
+    }
 }
 
 data class ChildNode(
