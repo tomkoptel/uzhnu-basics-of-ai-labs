@@ -1,6 +1,14 @@
 package uzhnu.edu.toie.huffman
 
-abstract class Node(open val weight: Int)
+import java.util.Comparator as JavaComparator
+
+sealed class Node(open val weight: Int) {
+    object Comparator : JavaComparator<Node> {
+        override fun compare(nodeA: Node, nodeB: Node): Int {
+            return nodeA.weight.compareTo(nodeB.weight)
+        }
+    }
+}
 
 data class ChildNode(
     val value: Char,
