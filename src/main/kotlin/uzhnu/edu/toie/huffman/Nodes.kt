@@ -3,7 +3,7 @@ package uzhnu.edu.toie.huffman
 import java.util.Comparator as JavaComparator
 
 sealed class Node(open val weight: Int) {
-    object Comparator : JavaComparator<Node> {
+    object Ascending : JavaComparator<Node> {
         override fun compare(nodeA: Node, nodeB: Node): Int {
             return nodeA.weight.compareTo(nodeB.weight)
         }

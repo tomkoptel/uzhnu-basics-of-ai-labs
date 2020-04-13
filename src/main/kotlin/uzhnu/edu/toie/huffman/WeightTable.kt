@@ -5,9 +5,8 @@ import java.util.*
 class WeightTable(
     val queue: Queue<Node>
 ) {
-
     fun buildTreeHead() : Node {
-        val internalQueue = PriorityQueue(Node.Comparator).apply { addAll(queue) }
+        val internalQueue = PriorityQueue(Node.Ascending).apply { addAll(queue) }
 
         while (internalQueue.size != 1) {
             val left = internalQueue.poll()
@@ -19,9 +18,11 @@ class WeightTable(
     }
 
     companion object {
-        fun create(frequencies: List<Pair<Char, Int>>): WeightTable {
-            val queue = PriorityQueue(Node.Comparator)
-            frequencies.forEach { queue.add(it.toNode()) }
+        fun create(frequencies: Map<Char, Int>): WeightTable {
+            val queue = PriorityQueue(Node.Ascending)
+            frequencies.forEach { (char, weight) ->
+                queue.add(ChildNode(value = char, weight = weight))
+            }
             return WeightTable(queue)
         }
     }
