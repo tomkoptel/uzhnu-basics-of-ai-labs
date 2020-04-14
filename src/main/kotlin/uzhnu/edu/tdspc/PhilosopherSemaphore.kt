@@ -10,13 +10,13 @@ class PhilosopherSemaphore(
                 // thinking
                 doAction("${System.nanoTime()}: Thinking")
                 if (leftFork.isFree()) {
-                    leftFork.pick()
                     doAction("${System.nanoTime()}: Picked up left fork")
+                    leftFork.pick()
 
                     if (rightFork.isFree()) {
                         // eating
-                        rightFork.pick()
                         doAction("${System.nanoTime()}: Picked up right fork - eating")
+                        rightFork.pick()
 
                         rightFork.putDown()
                         doAction("${System.nanoTime()}: Put down right fork")
