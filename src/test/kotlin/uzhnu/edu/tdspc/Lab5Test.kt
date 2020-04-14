@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit
 object Lab5Test : Spek({
     describe("philosophers dinning using monitors") {
         it("should not run in the dead lock") {
-            val philosophers = arrayOfNulls<Philosopher>(size = 5)
+            val philosophers = arrayOfNulls<PhilosopherMonitor>(size = 5)
             val forks = (0 until 5).map { Any() }
             val threads = mutableListOf<Thread>()
 
@@ -24,11 +24,11 @@ object Lab5Test : Spek({
                  */
                 if (i == philosophers.size - 1) {
                     // The last philosopher picks up the right fork first
-                    philosophers[i] = Philosopher(rightFork, leftFork)
+                    philosophers[i] = PhilosopherMonitor(rightFork, leftFork)
                 } else {
-                    philosophers[i] = Philosopher(leftFork, rightFork)
+                    philosophers[i] = PhilosopherMonitor(leftFork, rightFork)
                 }
-                philosophers[i] = Philosopher(leftFork, rightFork)
+                philosophers[i] = PhilosopherMonitor(leftFork, rightFork)
                 val t = Thread(philosophers[i], "Philosopher " + (i + 1))
                 t.start()
                 threads.add(t)
@@ -39,36 +39,3 @@ object Lab5Test : Spek({
     }
 })
 
-class Philosopher(
-    private val rightFork: Any,
-    private val leftFork: Any
-) : Runnable {
-    override fun run() {
-        try {
-            while (true) {
-                // thinking
-                doAction("${System.nanoTime()}: Thinking")
-                synchronized(leftFork) {
-                    doAction("${System.nanoTime()}: Picked up left fork")
-
-                    synchronized(rightFork) {
-                        // eating
-                        doAction("${System.nanoTime()}: Picked up right fork - eating")
-                        doAction("${System.nanoTime()}: Put down right fork")
-                    }
-
-                    // Back to thinking
-                    doAction("${System.nanoTime()}: Put down left fork. Back to thinking")
-                }
-            }
-        } catch (e: InterruptedException) {
-            Thread.currentThread().interrupt()
-            return
-        }
-    }
-
-    private fun doAction(action: String) {
-        println(Thread.currentThread().name + " " + action)
-        Thread.sleep((Math.random() * 100).toLong())
-    }
-}
