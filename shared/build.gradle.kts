@@ -76,7 +76,7 @@ kotlin {
         implementation(Deps.AndroidXTest.junit)
         implementation(Deps.AndroidXTest.runner)
         implementation(Deps.AndroidXTest.rules)
-        implementation("org.robolectric:robolectric:4.3")
+        implementation(Deps.AndroidTest.robolectric)
     }
 
     sourceSets["iosMain"].dependencies {

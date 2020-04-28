@@ -39,6 +39,10 @@ object Deps {
         val rules = "androidx.test:rules:${Versions.android_x}"
     }
 
+    object AndroidTest {
+        val robolectric = "org.robolectric:robolectric:4.3"
+    }
+
     object AndroidUI {
         val recyclerView = "androidx.recyclerview:recyclerview:1.1.0"
         val appcompat = "androidx.appcompat:appcompat:1.1.0"
