@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uzhnu.edu.tdspc.Lab3Test" tests="20" skipped="0" failures="0" errors="0" timestamp="2020-04-28T19:29:42" hostname="WRO0023.local" time="18.093">
+  <properties/>
+  <testcase name="parallel run 2 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.038"/>
+  <testcase name="parallel run 4 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.043"/>
+  <testcase name="parallel run 8 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.019"/>
+  <testcase name="parallel run 16 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.011"/>
+  <testcase name="single thread run" classname="uzhnu.edu.tdspc.Lab3Test" time="0.005"/>
+  <testcase name="parallel run 2 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.024"/>
+  <testcase name="parallel run 4 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.015"/>
+  <testcase name="parallel run 8 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.015"/>
+  <testcase name="parallel run 16 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.015"/>
+  <testcase name="single thread run" classname="uzhnu.edu.tdspc.Lab3Test" time="0.08"/>
+  <testcase name="parallel run 2 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.595"/>
+  <testcase name="parallel run 4 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.413"/>
+  <testcase name="parallel run 8 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.287"/>
+  <testcase name="parallel run 16 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="0.262"/>
+  <testcase name="single thread run" classname="uzhnu.edu.tdspc.Lab3Test" time="2.059"/>
+  <testcase name="parallel run 2 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="2.298"/>
+  <testcase name="parallel run 4 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="1.536"/>
+  <testcase name="parallel run 8 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="1.154"/>
+  <testcase name="parallel run 16 slices" classname="uzhnu.edu.tdspc.Lab3Test" time="1.114"/>
+  <testcase name="single thread run" classname="uzhnu.edu.tdspc.Lab3Test" time="8.107"/>
+  <system-out><![CDATA[result=800
+spent=34
+result=800
+spent=41
+result=800
+spent=17
+result=800
+spent=9
+result=800
+spent=4
+result=9800
+spent=24
+result=9800
+spent=13
+result=9800
+spent=13
+result=9800
+spent=15
+result=9800
+spent=79
+result=49800
+spent=595
+result=49800
+spent=412
+result=49800
+spent=285
+result=49800
+spent=262
+result=49800
+spent=2057
+result=99800
+spent=2297
+result=99800
+spent=1535
+result=99800
+spent=1154
+result=99800
+spent=1112
+result=99800
+spent=8106
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

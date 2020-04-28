@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uzhnu.edu.toie.hamming.EncodedStringTest" tests="26" skipped="0" failures="0" errors="0" timestamp="2020-04-28T19:30:05" hostname="WRO0023.local" time="0.014">
+  <properties/>
+  <testcase name="should encode '111' to '1'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.005"/>
+  <testcase name="should encode '10011' to '01'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '01111' to '11'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.001"/>
+  <testcase name="should encode '00110010000' to '1001000'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '10111001001' to '1100001'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '11101010101' to '1101101'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.001"/>
+  <testcase name="should encode '01101011001' to '1101001'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '01101010110' to '1101110'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '01111001111' to '1100111'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.001"/>
+  <testcase name="should encode '10011000000' to '0100000'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '11111000011' to '1100011'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '10101011111' to '1101111'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.001"/>
+  <testcase name="should encode '11111001100' to '1100100'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '00111000101' to '1100101'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '011100101010' to '10011010'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '000' to '0'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '00000' to '00'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.001"/>
+  <testcase name="should encode '000000' to '000'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '0000000' to '0000'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '000000000' to '00000'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.001"/>
+  <testcase name="should encode '011' to '1'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '101' to '1'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.001"/>
+  <testcase name="should encode '100' to '0'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '010' to '0'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <testcase name="should encode '11011' to '01'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.001"/>
+  <testcase name="should encode '10001' to '01'" classname="uzhnu.edu.toie.hamming.EncodedStringTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

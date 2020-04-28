@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uzhnu.edu.toie.hamming.LibraryTest" tests="41" skipped="0" failures="0" errors="0" timestamp="2020-04-28T19:30:05" hostname="WRO0023.local" time="0.022">
+  <properties/>
+  <testcase name="for msgLength=1 should return codewordSize=3" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.002"/>
+  <testcase name="for msgLength=2 should return codewordSize=5" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.001"/>
+  <testcase name="for msgLength=3 should return codewordSize=6" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for msgLength=4 should return codewordSize=7" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for msgLength=5 should return codewordSize=9" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for msgLength=6 should return codewordSize=10" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for msgLength=7 should return codewordSize=11" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=1 should return result=[]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.006"/>
+  <testcase name="for startIndex=0 and endIndex=2 should return result=[]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=3 should return result=[2]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=4 should return result=[2]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=5 should return result=[2, 4]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.001"/>
+  <testcase name="for startIndex=0 and endIndex=6 should return result=[2, 4]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=7 should return result=[2, 4, 6]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=8 should return result=[2, 4, 6]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.001"/>
+  <testcase name="for startIndex=0 and endIndex=9 should return result=[2, 4, 6, 8]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=10 should return result=[2, 4, 6, 8]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=11 should return result=[2, 4, 6, 8, 10]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=12 should return result=[2, 4, 6, 8, 10]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.001"/>
+  <testcase name="for startIndex=0 and endIndex=13 should return result=[2, 4, 6, 8, 10, 12]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=14 should return result=[2, 4, 6, 8, 10, 12]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=15 should return result=[2, 4, 6, 8, 10, 12, 14]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=16 should return result=[2, 4, 6, 8, 10, 12, 14]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=0 and endIndex=17 should return result=[2, 4, 6, 8, 10, 12, 14, 16]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=1 and endIndex=8 should return result=[2, 5, 6]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=1 and endIndex=12 should return result=[2, 5, 6, 9, 10]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=2 and endIndex=8 should return result=[3, 4]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.001"/>
+  <testcase name="for startIndex=3 and endIndex=8 should return result=[4, 5, 6]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="for startIndex=4 and endIndex=8 should return result=[5, 6, 7]" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="the num=0 isPowerOfTwo=false" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.001"/>
+  <testcase name="the num=1 isPowerOfTwo=true" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="the num=2 isPowerOfTwo=true" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="the num=4 isPowerOfTwo=true" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.001"/>
+  <testcase name="the num=8 isPowerOfTwo=true" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="the num=16 isPowerOfTwo=true" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="the num=32 isPowerOfTwo=true" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="the num=64 isPowerOfTwo=true" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.001"/>
+  <testcase name="the num=128 isPowerOfTwo=true" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.001"/>
+  <testcase name="the num=256 isPowerOfTwo=true" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <testcase name="should convert char=1 to binaryInt=1" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.001"/>
+  <testcase name="should convert char=0 to binaryInt=0" classname="uzhnu.edu.toie.hamming.LibraryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,229 @@
+result=800
+	spent=34
+result=800
+	spent=41
+result=800
+	spent=17
+result=800
+spent=9
+	result=800
+	spent=4
+
+result=9800
+
+	spent=24
+result=9800
+	spent=13
+result=9800
+	spent=13
+result=9800
+	spent=15
+result=9800
+	spent=79
+result=49800
+
+spent=595
+result=49800
+
+spent=412
+result=49800
+
+spent=285
+result=49800
+
+spent=262
+result=49800
+spent=2057
+result=99800
+spent=2297
+result=99800
+spent=1535
+result=99800
+spent=1154
+result=99800
+spent=1112
+result=99800
+spent=8106
+(Philosopher 1 696401855316119: Thinking
+(Philosopher 2 696401855401130: Thinking
+(Philosopher 3 696401855436611: Thinking
+(Philosopher 4 696401855589016: Thinking
+(Philosopher 5 696401855750582: Thinking
+3Philosopher 5 696401865215712: Picked up left fork
+3Philosopher 1 696401879253276: Picked up left fork
+=Philosopher 5 696401885294998: Picked up right fork - eating
+3Philosopher 5 696401912208942: Put down right fork
+3Philosopher 3 696401921215805: Picked up left fork
+3Philosopher 2 696401928937568: Picked up left fork
+DPhilosopher 5 696401958853185: Put down left fork. Back to thinking
+3Philosopher 4 696401958889928: Picked up left fork
+(Philosopher 5 696402012392167: Thinking
+=Philosopher 1 696402012392299: Picked up right fork - eating
+3Philosopher 1 696402064281139: Put down right fork
+3Philosopher 5 696402154322743: Picked up left fork
+DPhilosopher 1 696402154306481: Put down left fork. Back to thinking
+=Philosopher 2 696402194291425: Picked up right fork - eating
+(Philosopher 1 696402194270264: Thinking
+3Philosopher 2 696402294020528: Put down right fork
+3Philosopher 1 696402321290675: Picked up left fork
+DPhilosopher 2 696402321280911: Put down left fork. Back to thinking
+=Philosopher 3 696402354433165: Picked up right fork - eating
+(Philosopher 2 696402354425009: Thinking
+3Philosopher 3 696402398168239: Put down right fork
+3Philosopher 2 696402418221271: Picked up left fork
+DPhilosopher 3 696402418212179: Put down left fork. Back to thinking
+(Philosopher 3 696402519910494: Thinking
+=Philosopher 4 696402519939482: Picked up right fork - eating
+3Philosopher 4 696402615289892: Put down right fork
+DPhilosopher 4 696402615473671: Put down left fork. Back to thinking
+3Philosopher 3 696402615490518: Picked up left fork
+=Philosopher 5 696402696256936: Picked up right fork - eating
+(Philosopher 4 696402696248968: Thinking
+3Philosopher 5 696402732762229: Put down right fork
+3Philosopher 4 696402764218092: Picked up left fork
+DPhilosopher 5 696402764196649: Put down left fork. Back to thinking
+(Philosopher 5 696402779768221: Thinking
+=Philosopher 1 696402779792857: Picked up right fork - eating
+3Philosopher 1 696402802200626: Put down right fork
+DPhilosopher 1 696402814502929: Put down left fork. Back to thinking
+3Philosopher 5 696402828241505: Picked up left fork
+(Philosopher 1 696402844355123: Thinking
+=Philosopher 2 696402844370933: Picked up right fork - eating
+3Philosopher 2 696402864191859: Put down right fork
+DPhilosopher 2 696402880248518: Put down left fork. Back to thinking
+3Philosopher 1 696402908718077: Picked up left fork
+(Philosopher 2 696402976250943: Thinking
+=Philosopher 3 696402976260608: Picked up right fork - eating
+3Philosopher 3 696403019639768: Put down right fork
+DPhilosopher 3 696403101245488: Put down left fork. Back to thinking
+3Philosopher 2 696403101252496: Picked up left fork
+(Philosopher 3 696403125040124: Thinking
+=Philosopher 4 696403125040124: Picked up right fork - eating
+3Philosopher 4 696403200155387: Put down right fork
+DPhilosopher 4 696403271315225: Put down left fork. Back to thinking
+3Philosopher 3 696403271323732: Picked up left fork
+(Philosopher 4 696403325744960: Thinking
+=Philosopher 5 696403325771471: Picked up right fork - eating
+3Philosopher 5 696403394213871: Put down right fork
+DPhilosopher 5 696403411251158: Put down left fork. Back to thinking
+3Philosopher 4 696403411267119: Picked up left fork
+(Philosopher 5 696403483653683: Thinking
+=Philosopher 1 696403483671993: Picked up right fork - eating
+3Philosopher 1 696403505999474: Put down right fork
+DPhilosopher 1 696403561944579: Put down left fork. Back to thinking
+3Philosopher 5 696403564296251: Picked up left fork
+(Philosopher 1 696403663010974: Thinking
+=Philosopher 2 696403663033258: Picked up right fork - eating
+3Philosopher 2 696403669280954: Put down right fork
+DPhilosopher 2 696403726172585: Put down left fork. Back to thinking
+3Philosopher 1 696403726191859: Picked up left fork
+(Philosopher 2 696403814040935: Thinking
+=Philosopher 3 696403814051899: Picked up right fork - eating
+3Philosopher 3 696403876170363: Put down right fork
+3Philosopher 2 696403969989399: Picked up left fork
+DPhilosopher 3 696403969976219: Put down left fork. Back to thinking
+(Philosopher 3 696403998248027: Thinking
+=Philosopher 4 696403998256093: Picked up right fork - eating
+3Philosopher 4 696404091152979: Put down right fork
+DPhilosopher 4 696404147201074: Put down left fork. Back to thinking
+3Philosopher 3 696404147208637: Picked up left fork
+=Philosopher 5 696404246200250: Picked up right fork - eating
+(Philosopher 4 696404246140827: Thinking
+3Philosopher 5 696404300330656: Put down right fork
+DPhilosopher 5 696404324291190: Put down left fork. Back to thinking
+3Philosopher 4 696404339217882: Picked up left fork
+(Philosopher 1 696404377789700: Thinking
+(Philosopher 2 696404377915217: Thinking
+(Philosopher 3 696404378052462: Thinking
+(Philosopher 4 696404378170697: Thinking
+(Philosopher 5 696404378288727: Thinking
+3Philosopher 1 696404422134026: Picked up left fork
+(Philosopher 5 696404427221924: Thinking
+=Philosopher 1 696404427244135: Picked up right fork - eating
+3Philosopher 5 696404433661099: Picked up left fork
+3Philosopher 3 696404437618818: Picked up left fork
+3Philosopher 4 696404448300538: Picked up left fork
+3Philosopher 2 696404464654952: Picked up left fork
+3Philosopher 1 696404520156175: Put down right fork
+3Philosopher 5 696404581230460: Picked up left fork
+DPhilosopher 1 696404581220383: Put down left fork. Back to thinking
+(Philosopher 1 696404642191578: Thinking
+=Philosopher 2 696404642200673: Picked up right fork - eating
+3Philosopher 2 696404726440885: Put down right fork
+DPhilosopher 2 696404751310883: Put down left fork. Back to thinking
+3Philosopher 1 696404751341429: Picked up left fork
+=Philosopher 3 696404820174521: Picked up right fork - eating
+(Philosopher 2 696404820144226: Thinking
+3Philosopher 3 696404827295595: Put down right fork
+DPhilosopher 3 696404920297399: Put down left fork. Back to thinking
+3Philosopher 2 696404920310526: Picked up left fork
+(Philosopher 3 696404926826841: Thinking
+=Philosopher 4 696404926843175: Picked up right fork - eating
+3Philosopher 4 696404966150443: Put down right fork
+DPhilosopher 4 696404971367229: Put down left fork. Back to thinking
+3Philosopher 3 696405000171038: Picked up left fork
+(Philosopher 4 696405054152492: Thinking
+=Philosopher 5 696405054191449: Picked up right fork - eating
+3Philosopher 5 696405056803161: Put down right fork
+3Philosopher 4 696405155128415: Picked up left fork
+DPhilosopher 5 696405155112895: Put down left fork. Back to thinking
+=Philosopher 1 696405200176574: Picked up right fork - eating
+(Philosopher 5 696405200157953: Thinking
+3Philosopher 1 696405257826678: Put down right fork
+DPhilosopher 1 696405314258529: Put down left fork. Back to thinking
+3Philosopher 5 696405314278835: Picked up left fork
+=Philosopher 2 696405340158244: Picked up right fork - eating
+(Philosopher 1 696405340137584: Thinking
+3Philosopher 2 696405400595775: Put down right fork
+3Philosopher 1 696405423837380: Picked up left fork
+DPhilosopher 2 696405423824062: Put down left fork. Back to thinking
+(Philosopher 2 696405470122875: Thinking
+=Philosopher 3 696405470129902: Picked up right fork - eating
+3Philosopher 3 696405524401040: Put down right fork
+DPhilosopher 3 696405524567408: Put down left fork. Back to thinking
+3Philosopher 2 696405569131536: Picked up left fork
+=Philosopher 4 696405613854500: Picked up right fork - eating
+(Philosopher 3 696405613836197: Thinking
+3Philosopher 4 696405672641154: Put down right fork
+DPhilosopher 4 696405679213081: Put down left fork. Back to thinking
+3Philosopher 3 696405684597215: Picked up left fork
+(Philosopher 4 696405715187262: Thinking
+=Philosopher 5 696405715243644: Picked up right fork - eating
+3Philosopher 5 696405806204947: Put down right fork
+3Philosopher 4 696405852287442: Picked up left fork
+DPhilosopher 5 696405852272487: Put down left fork. Back to thinking
+(Philosopher 5 696405943799291: Thinking
+=Philosopher 1 696405943840560: Picked up right fork - eating
+3Philosopher 1 696405993158393: Put down right fork
+DPhilosopher 1 696405995994541: Put down left fork. Back to thinking
+3Philosopher 5 696405996057603: Picked up left fork
+(Philosopher 1 696406047268586: Thinking
+=Philosopher 2 696406047275111: Picked up right fork - eating
+3Philosopher 2 696406109518288: Put down right fork
+3Philosopher 1 696406148192440: Picked up left fork
+DPhilosopher 2 696406148187856: Put down left fork. Back to thinking
+(Philosopher 2 696406247184807: Thinking
+=Philosopher 3 696406247201494: Picked up right fork - eating
+3Philosopher 3 696406294206202: Put down right fork
+3Philosopher 2 696406376073339: Picked up left fork
+DPhilosopher 3 696406376046451: Put down left fork. Back to thinking
+(Philosopher 3 696406473144698: Thinking
+=Philosopher 4 696406473184396: Picked up right fork - eating
+3Philosopher 4 696406522288970: Put down right fork
+DPhilosopher 4 696406578214113: Put down left fork. Back to thinking
+3Philosopher 3 696406578259718: Picked up left fork
+(Philosopher 4 696406616089040: Thinking
+=Philosopher 5 696406616096314: Picked up right fork - eating
+3Philosopher 5 696406622612793: Put down right fork
+3Philosopher 4 696406714363857: Picked up left fork
+DPhilosopher 5 696406714349979: Put down left fork. Back to thinking
+=Philosopher 1 696406729156146: Picked up right fork - eating
+(Philosopher 5 696406729149484: Thinking
+3Philosopher 1 696406782572839: Put down right fork
+DPhilosopher 1 696406798159052: Put down left fork. Back to thinking
+3Philosopher 5 696406802137775: Picked up left fork
+(Philosopher 1 696406836291746: Thinking
+=Philosopher 2 696406836319373: Picked up right fork - eating
+3Philosopher 2 696406857216371: Put down right fork
+1DPhilosopher 2 696406911067796: Put down left fork. Back to thinking
+13Philosopher 1 696406911072882: Picked up left fork
