@@ -39,6 +39,12 @@ object Deps {
         val rules = "androidx.test:rules:${Versions.android_x}"
     }
 
+    object AndroidUI {
+        val recyclerView = "androidx.recyclerview:recyclerview:1.1.0"
+        val appcompat = "androidx.appcompat:appcompat:1.1.0"
+        val constraintlayout = "androidx.constraintlayout:constraintlayout:1.1.3"
+    }
+
     object KotlinTest {
         val common =      "org.jetbrains.kotlin:kotlin-test-common:${Versions.kotlin}"
         val annotations = "org.jetbrains.kotlin:kotlin-test-annotations-common:${Versions.kotlin}"
