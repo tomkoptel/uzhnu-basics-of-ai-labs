@@ -33,6 +33,7 @@ android {
 
 dependencies {
     implementation(kotlin("stdlib-jdk7", KotlinCompilerVersion.VERSION))
+    implementation(project(":shared"))
     implementation(Deps.AndroidUI.recyclerView)
     implementation(Deps.AndroidUI.appcompat)
     implementation(Deps.AndroidUI.constraintlayout)
