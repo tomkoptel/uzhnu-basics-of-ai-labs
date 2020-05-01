@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		795D8B0BBDA7E284A659842E /* Pods_bai_dialog_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D7A82E691EA94E6F44CA6F /* Pods_bai_dialog_ios.framework */; };
 		EFD31C71245C50A50078E6AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31C70245C50A50078E6AF /* AppDelegate.swift */; };
 		EFD31C73245C50A50078E6AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31C72245C50A50078E6AF /* SceneDelegate.swift */; };
 		EFD31C75245C50A50078E6AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31C74245C50A50078E6AF /* ContentView.swift */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29D7A82E691EA94E6F44CA6F /* Pods_bai_dialog_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bai_dialog_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7791BF1D942807A1EA951789 /* Pods-bai_dialog_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bai_dialog_ios.debug.xcconfig"; path = "Target Support Files/Pods-bai_dialog_ios/Pods-bai_dialog_ios.debug.xcconfig"; sourceTree = "<group>"; };
+		7F32210DB108921F52A0A984 /* Pods-bai_dialog_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bai_dialog_ios.release.xcconfig"; path = "Target Support Files/Pods-bai_dialog_ios/Pods-bai_dialog_ios.release.xcconfig"; sourceTree = "<group>"; };
 		EFD31C6D245C50A50078E6AF /* bai_dialog_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bai_dialog_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD31C70245C50A50078E6AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD31C72245C50A50078E6AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				795D8B0BBDA7E284A659842E /* Pods_bai_dialog_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86270E20D216F54E3F6277A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7791BF1D942807A1EA951789 /* Pods-bai_dialog_ios.debug.xcconfig */,
+				7F32210DB108921F52A0A984 /* Pods-bai_dialog_ios.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E1930871942DD86A7BC8524D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29D7A82E691EA94E6F44CA6F /* Pods_bai_dialog_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EFD31C64245C50A50078E6AF = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +106,8 @@
 				EFD31C86245C50AD0078E6AF /* bai_dialog_iosTests */,
 				EFD31C91245C50AD0078E6AF /* bai_dialog_iosUITests */,
 				EFD31C6E245C50A50078E6AF /* Products */,
+				86270E20D216F54E3F6277A6 /* Pods */,
+				E1930871942DD86A7BC8524D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFD31C97245C50AD0078E6AF /* Build configuration list for PBXNativeTarget "bai_dialog_ios" */;
 			buildPhases = (
+				B76A835F32AF9D6DED240202 /* [CP] Check Pods Manifest.lock */,
 				EFD31C69245C50A50078E6AF /* Sources */,
 				EFD31C6A245C50A50078E6AF /* Frameworks */,
 				EFD31C6B245C50A50078E6AF /* Resources */,
+				7DB0DAA81CB782127FACC4CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +288,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DB0DAA81CB782127FACC4CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bai_dialog_ios/Pods-bai_dialog_ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bai_dialog_ios/Pods-bai_dialog_ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bai_dialog_ios/Pods-bai_dialog_ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B76A835F32AF9D6DED240202 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bai_dialog_ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EFD31C69245C50A50078E6AF /* Sources */ = {
@@ -432,6 +501,7 @@
 		};
 		EFD31C98245C50AD0078E6AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7791BF1D942807A1EA951789 /* Pods-bai_dialog_ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +521,7 @@
 		};
 		EFD31C99245C50AD0078E6AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F32210DB108921F52A0A984 /* Pods-bai_dialog_ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
