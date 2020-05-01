@@ -3,19 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		795D8B0BBDA7E284A659842E /* Pods_bai_dialog_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D7A82E691EA94E6F44CA6F /* Pods_bai_dialog_ios.framework */; };
 		EFD31C71245C50A50078E6AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31C70245C50A50078E6AF /* AppDelegate.swift */; };
-		EFD31C73245C50A50078E6AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31C72245C50A50078E6AF /* SceneDelegate.swift */; };
-		EFD31C75245C50A50078E6AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31C74245C50A50078E6AF /* ContentView.swift */; };
 		EFD31C77245C50AD0078E6AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD31C76245C50AD0078E6AF /* Assets.xcassets */; };
 		EFD31C7A245C50AD0078E6AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD31C79245C50AD0078E6AF /* Preview Assets.xcassets */; };
 		EFD31C7D245C50AD0078E6AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD31C7B245C50AD0078E6AF /* LaunchScreen.storyboard */; };
 		EFD31C88245C50AD0078E6AF /* bai_dialog_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31C87245C50AD0078E6AF /* bai_dialog_iosTests.swift */; };
 		EFD31C93245C50AD0078E6AF /* bai_dialog_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31C92245C50AD0078E6AF /* bai_dialog_iosUITests.swift */; };
+		EFD31CA6245C91820078E6AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31CA5245C91820078E6AF /* ViewController.swift */; };
+		EFD31CA7245C932E0078E6AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD31CA9245C932E0078E6AF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,6 @@
 		7F32210DB108921F52A0A984 /* Pods-bai_dialog_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bai_dialog_ios.release.xcconfig"; path = "Target Support Files/Pods-bai_dialog_ios/Pods-bai_dialog_ios.release.xcconfig"; sourceTree = "<group>"; };
 		EFD31C6D245C50A50078E6AF /* bai_dialog_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bai_dialog_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD31C70245C50A50078E6AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EFD31C72245C50A50078E6AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EFD31C74245C50A50078E6AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EFD31C76245C50AD0078E6AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFD31C79245C50AD0078E6AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFD31C7C245C50AD0078E6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +51,8 @@
 		EFD31C8E245C50AD0078E6AF /* bai_dialog_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bai_dialog_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD31C92245C50AD0078E6AF /* bai_dialog_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bai_dialog_iosUITests.swift; sourceTree = "<group>"; };
 		EFD31C94245C50AD0078E6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFD31CA5245C91820078E6AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFD31CA8245C932E0078E6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,6 @@
 				7791BF1D942807A1EA951789 /* Pods-bai_dialog_ios.debug.xcconfig */,
 				7F32210DB108921F52A0A984 /* Pods-bai_dialog_ios.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -125,11 +124,11 @@
 			isa = PBXGroup;
 			children = (
 				EFD31C70245C50A50078E6AF /* AppDelegate.swift */,
-				EFD31C72245C50A50078E6AF /* SceneDelegate.swift */,
-				EFD31C74245C50A50078E6AF /* ContentView.swift */,
-				EFD31C76245C50AD0078E6AF /* Assets.xcassets */,
+				EFD31CA5245C91820078E6AF /* ViewController.swift */,
 				EFD31C7B245C50AD0078E6AF /* LaunchScreen.storyboard */,
+				EFD31CA9245C932E0078E6AF /* Main.storyboard */,
 				EFD31C7E245C50AD0078E6AF /* Info.plist */,
+				EFD31C76245C50AD0078E6AF /* Assets.xcassets */,
 				EFD31C78245C50AD0078E6AF /* Preview Content */,
 			);
 			path = bai_dialog_ios;
@@ -270,6 +269,7 @@
 				EFD31C7D245C50AD0078E6AF /* LaunchScreen.storyboard in Resources */,
 				EFD31C7A245C50AD0078E6AF /* Preview Assets.xcassets in Resources */,
 				EFD31C77245C50AD0078E6AF /* Assets.xcassets in Resources */,
+				EFD31CA7245C932E0078E6AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +336,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD31CA6245C91820078E6AF /* ViewController.swift in Sources */,
 				EFD31C71245C50A50078E6AF /* AppDelegate.swift in Sources */,
-				EFD31C73245C50A50078E6AF /* SceneDelegate.swift in Sources */,
-				EFD31C75245C50A50078E6AF /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +379,14 @@
 				EFD31C7C245C50AD0078E6AF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EFD31CA9245C932E0078E6AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFD31CA8245C932E0078E6AF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
