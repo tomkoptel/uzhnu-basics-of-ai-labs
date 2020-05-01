@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		795D8B0BBDA7E284A659842E /* Pods_bai_dialog_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D7A82E691EA94E6F44CA6F /* Pods_bai_dialog_ios.framework */; };
+		EFD31C71245C50A50078E6AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31C70245C50A50078E6AF /* AppDelegate.swift */; };
+		EFD31C77245C50AD0078E6AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD31C76245C50AD0078E6AF /* Assets.xcassets */; };
+		EFD31C7A245C50AD0078E6AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD31C79245C50AD0078E6AF /* Preview Assets.xcassets */; };
+		EFD31C7D245C50AD0078E6AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD31C7B245C50AD0078E6AF /* LaunchScreen.storyboard */; };
+		EFD31C88245C50AD0078E6AF /* bai_dialog_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31C87245C50AD0078E6AF /* bai_dialog_iosTests.swift */; };
+		EFD31C93245C50AD0078E6AF /* bai_dialog_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31C92245C50AD0078E6AF /* bai_dialog_iosUITests.swift */; };
+		EFD31CA6245C91820078E6AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD31CA5245C91820078E6AF /* ViewController.swift */; };
+		EFD31CA7245C932E0078E6AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD31CA9245C932E0078E6AF /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFD31C84245C50AD0078E6AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFD31C65245C50A50078E6AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFD31C6C245C50A50078E6AF;
+			remoteInfo = bai_dialog_ios;
+		};
+		EFD31C8F245C50AD0078E6AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFD31C65245C50A50078E6AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFD31C6C245C50A50078E6AF;
+			remoteInfo = bai_dialog_ios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29D7A82E691EA94E6F44CA6F /* Pods_bai_dialog_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bai_dialog_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7791BF1D942807A1EA951789 /* Pods-bai_dialog_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bai_dialog_ios.debug.xcconfig"; path = "Target Support Files/Pods-bai_dialog_ios/Pods-bai_dialog_ios.debug.xcconfig"; sourceTree = "<group>"; };
+		7F32210DB108921F52A0A984 /* Pods-bai_dialog_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bai_dialog_ios.release.xcconfig"; path = "Target Support Files/Pods-bai_dialog_ios/Pods-bai_dialog_ios.release.xcconfig"; sourceTree = "<group>"; };
+		EFD31C6D245C50A50078E6AF /* bai_dialog_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bai_dialog_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD31C70245C50A50078E6AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFD31C76245C50AD0078E6AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFD31C79245C50AD0078E6AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EFD31C7C245C50AD0078E6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFD31C7E245C50AD0078E6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFD31C83245C50AD0078E6AF /* bai_dialog_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bai_dialog_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD31C87245C50AD0078E6AF /* bai_dialog_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bai_dialog_iosTests.swift; sourceTree = "<group>"; };
+		EFD31C89245C50AD0078E6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFD31C8E245C50AD0078E6AF /* bai_dialog_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bai_dialog_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD31C92245C50AD0078E6AF /* bai_dialog_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bai_dialog_iosUITests.swift; sourceTree = "<group>"; };
+		EFD31C94245C50AD0078E6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFD31CA5245C91820078E6AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFD31CA8245C932E0078E6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFD31C6A245C50A50078E6AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				795D8B0BBDA7E284A659842E /* Pods_bai_dialog_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD31C80245C50AD0078E6AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD31C8B245C50AD0078E6AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86270E20D216F54E3F6277A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7791BF1D942807A1EA951789 /* Pods-bai_dialog_ios.debug.xcconfig */,
+				7F32210DB108921F52A0A984 /* Pods-bai_dialog_ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E1930871942DD86A7BC8524D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29D7A82E691EA94E6F44CA6F /* Pods_bai_dialog_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFD31C64245C50A50078E6AF = {
+			isa = PBXGroup;
+			children = (
+				EFD31C6F245C50A50078E6AF /* bai_dialog_ios */,
+				EFD31C86245C50AD0078E6AF /* bai_dialog_iosTests */,
+				EFD31C91245C50AD0078E6AF /* bai_dialog_iosUITests */,
+				EFD31C6E245C50A50078E6AF /* Products */,
+				86270E20D216F54E3F6277A6 /* Pods */,
+				E1930871942DD86A7BC8524D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EFD31C6E245C50A50078E6AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFD31C6D245C50A50078E6AF /* bai_dialog_ios.app */,
+				EFD31C83245C50AD0078E6AF /* bai_dialog_iosTests.xctest */,
+				EFD31C8E245C50AD0078E6AF /* bai_dialog_iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFD31C6F245C50A50078E6AF /* bai_dialog_ios */ = {
+			isa = PBXGroup;
+			children = (
+				EFD31C70245C50A50078E6AF /* AppDelegate.swift */,
+				EFD31CA5245C91820078E6AF /* ViewController.swift */,
+				EFD31C7B245C50AD0078E6AF /* LaunchScreen.storyboard */,
+				EFD31CA9245C932E0078E6AF /* Main.storyboard */,
+				EFD31C7E245C50AD0078E6AF /* Info.plist */,
+				EFD31C76245C50AD0078E6AF /* Assets.xcassets */,
+				EFD31C78245C50AD0078E6AF /* Preview Content */,
+			);
+			path = bai_dialog_ios;
+			sourceTree = "<group>";
+		};
+		EFD31C78245C50AD0078E6AF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EFD31C79245C50AD0078E6AF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EFD31C86245C50AD0078E6AF /* bai_dialog_iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFD31C87245C50AD0078E6AF /* bai_dialog_iosTests.swift */,
+				EFD31C89245C50AD0078E6AF /* Info.plist */,
+			);
+			path = bai_dialog_iosTests;
+			sourceTree = "<group>";
+		};
+		EFD31C91245C50AD0078E6AF /* bai_dialog_iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFD31C92245C50AD0078E6AF /* bai_dialog_iosUITests.swift */,
+				EFD31C94245C50AD0078E6AF /* Info.plist */,
+			);
+			path = bai_dialog_iosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFD31C6C245C50A50078E6AF /* bai_dialog_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFD31C97245C50AD0078E6AF /* Build configuration list for PBXNativeTarget "bai_dialog_ios" */;
+			buildPhases = (
+				B76A835F32AF9D6DED240202 /* [CP] Check Pods Manifest.lock */,
+				EFD31C69245C50A50078E6AF /* Sources */,
+				EFD31C6A245C50A50078E6AF /* Frameworks */,
+				EFD31C6B245C50A50078E6AF /* Resources */,
+				7DB0DAA81CB782127FACC4CC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bai_dialog_ios;
+			productName = bai_dialog_ios;
+			productReference = EFD31C6D245C50A50078E6AF /* bai_dialog_ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFD31C82245C50AD0078E6AF /* bai_dialog_iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFD31C9A245C50AD0078E6AF /* Build configuration list for PBXNativeTarget "bai_dialog_iosTests" */;
+			buildPhases = (
+				EFD31C7F245C50AD0078E6AF /* Sources */,
+				EFD31C80245C50AD0078E6AF /* Frameworks */,
+				EFD31C81245C50AD0078E6AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFD31C85245C50AD0078E6AF /* PBXTargetDependency */,
+			);
+			name = bai_dialog_iosTests;
+			productName = bai_dialog_iosTests;
+			productReference = EFD31C83245C50AD0078E6AF /* bai_dialog_iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFD31C8D245C50AD0078E6AF /* bai_dialog_iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFD31C9D245C50AD0078E6AF /* Build configuration list for PBXNativeTarget "bai_dialog_iosUITests" */;
+			buildPhases = (
+				EFD31C8A245C50AD0078E6AF /* Sources */,
+				EFD31C8B245C50AD0078E6AF /* Frameworks */,
+				EFD31C8C245C50AD0078E6AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFD31C90245C50AD0078E6AF /* PBXTargetDependency */,
+			);
+			name = bai_dialog_iosUITests;
+			productName = bai_dialog_iosUITests;
+			productReference = EFD31C8E245C50AD0078E6AF /* bai_dialog_iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFD31C65245C50A50078E6AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Tom Koptel";
+				TargetAttributes = {
+					EFD31C6C245C50A50078E6AF = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					EFD31C82245C50AD0078E6AF = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = EFD31C6C245C50A50078E6AF;
+					};
+					EFD31C8D245C50AD0078E6AF = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = EFD31C6C245C50A50078E6AF;
+					};
+				};
+			};
+			buildConfigurationList = EFD31C68245C50A50078E6AF /* Build configuration list for PBXProject "bai_dialog_ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFD31C64245C50A50078E6AF;
+			productRefGroup = EFD31C6E245C50A50078E6AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFD31C6C245C50A50078E6AF /* bai_dialog_ios */,
+				EFD31C82245C50AD0078E6AF /* bai_dialog_iosTests */,
+				EFD31C8D245C50AD0078E6AF /* bai_dialog_iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFD31C6B245C50A50078E6AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD31C7D245C50AD0078E6AF /* LaunchScreen.storyboard in Resources */,
+				EFD31C7A245C50AD0078E6AF /* Preview Assets.xcassets in Resources */,
+				EFD31C77245C50AD0078E6AF /* Assets.xcassets in Resources */,
+				EFD31CA7245C932E0078E6AF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD31C81245C50AD0078E6AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD31C8C245C50AD0078E6AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DB0DAA81CB782127FACC4CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bai_dialog_ios/Pods-bai_dialog_ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bai_dialog_ios/Pods-bai_dialog_ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bai_dialog_ios/Pods-bai_dialog_ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B76A835F32AF9D6DED240202 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bai_dialog_ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFD31C69245C50A50078E6AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD31CA6245C91820078E6AF /* ViewController.swift in Sources */,
+				EFD31C71245C50A50078E6AF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD31C7F245C50AD0078E6AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD31C88245C50AD0078E6AF /* bai_dialog_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD31C8A245C50AD0078E6AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD31C93245C50AD0078E6AF /* bai_dialog_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFD31C85245C50AD0078E6AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFD31C6C245C50A50078E6AF /* bai_dialog_ios */;
+			targetProxy = EFD31C84245C50AD0078E6AF /* PBXContainerItemProxy */;
+		};
+		EFD31C90245C50AD0078E6AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFD31C6C245C50A50078E6AF /* bai_dialog_ios */;
+			targetProxy = EFD31C8F245C50AD0078E6AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFD31C7B245C50AD0078E6AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFD31C7C245C50AD0078E6AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EFD31CA9245C932E0078E6AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFD31CA8245C932E0078E6AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFD31C95245C50AD0078E6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EFD31C96245C50AD0078E6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFD31C98245C50AD0078E6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7791BF1D942807A1EA951789 /* Pods-bai_dialog_ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"bai_dialog_ios/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = bai_dialog_ios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tom.bai-dialog-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFD31C99245C50AD0078E6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F32210DB108921F52A0A984 /* Pods-bai_dialog_ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"bai_dialog_ios/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = bai_dialog_ios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tom.bai-dialog-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EFD31C9B245C50AD0078E6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = bai_dialog_iosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tom.bai-dialog-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bai_dialog_ios.app/bai_dialog_ios";
+			};
+			name = Debug;
+		};
+		EFD31C9C245C50AD0078E6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = bai_dialog_iosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tom.bai-dialog-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bai_dialog_ios.app/bai_dialog_ios";
+			};
+			name = Release;
+		};
+		EFD31C9E245C50AD0078E6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = bai_dialog_iosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tom.bai-dialog-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = bai_dialog_ios;
+			};
+			name = Debug;
+		};
+		EFD31C9F245C50AD0078E6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = bai_dialog_iosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tom.bai-dialog-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = bai_dialog_ios;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFD31C68245C50A50078E6AF /* Build configuration list for PBXProject "bai_dialog_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD31C95245C50AD0078E6AF /* Debug */,
+				EFD31C96245C50AD0078E6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFD31C97245C50AD0078E6AF /* Build configuration list for PBXNativeTarget "bai_dialog_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD31C98245C50AD0078E6AF /* Debug */,
+				EFD31C99245C50AD0078E6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFD31C9A245C50AD0078E6AF /* Build configuration list for PBXNativeTarget "bai_dialog_iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD31C9B245C50AD0078E6AF /* Debug */,
+				EFD31C9C245C50AD0078E6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFD31C9D245C50AD0078E6AF /* Build configuration list for PBXNativeTarget "bai_dialog_iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD31C9E245C50AD0078E6AF /* Debug */,
+				EFD31C9F245C50AD0078E6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFD31C65245C50A50078E6AF /* Project object */;
+}
