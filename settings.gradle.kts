@@ -1,8 +1,3 @@
-rootProject.name = "bai-dialog"
-
-buildCache {
-    local {
-        directory = File(rootDir, "build-cache")
-        removeUnusedEntriesAfterDays = 30
-    }
-}
+rootProject.name = "BAI Dialog"
+enableFeaturePreview("GRADLE_METADATA")
+include(":labs", ":app", ":shared")

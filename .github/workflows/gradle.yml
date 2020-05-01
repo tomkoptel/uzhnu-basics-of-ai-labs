@@ -36,5 +36,9 @@ jobs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
         restore-keys: |
           ${{ runner.os }}-gradle-
-    - name: Build with Gradle
-      run: ./gradlew build
+    - name: Build Labs
+      run: ./gradlew :labs:build
+    - name: Test Shared JVM
+      run: ./gradlew :shared:testDebugUnitTest
+    - name: Build Android App
+      run: ./gradlew :app:assembleDebug
