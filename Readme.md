@@ -1,7 +1,7 @@
 ![Java CI with Gradle](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/workflows/Java%20CI%20with%20Gradle/badge.svg)
 
 # Теорія інформації і кодування
-- Кодування та декодування кодом Хеммінга. [Сирцевий код](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/test/kotlin/uzhnu/edu/toie/hamming/HummingCodeSimpleTest.kt).
+- Кодування та декодування кодом [Гемінга](https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B4%D0%B8_%D0%93%D0%B5%D0%BC%D1%96%D0%BD%D0%B3%D0%B0). [Сирцевий код](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/test/kotlin/uzhnu/edu/toie/hamming/HummingCodeSimpleTest.kt).
 Приклад виконання тесту.
 ![hamming_test](images/hamming_test.png "hamming_test")
 - Алгоритм компресії Кодом Гаффмана. [Сирцевий код](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/main/kotlin/uzhnu/edu/toie/huffman). [Тести](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/blob/master/labs/src/test/kotlin/uzhnu/edu/toie/huffman/WeightTableTest.kt).
