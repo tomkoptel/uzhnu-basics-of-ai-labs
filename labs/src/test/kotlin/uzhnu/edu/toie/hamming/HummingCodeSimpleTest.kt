@@ -104,7 +104,9 @@ object HummingCodeSimpleTest : Spek({
                     c2 to 1,
                     c4 to 3
                 )
+                    // Відфільтровуємо 1, тобто позиції, що мають помилку
                     .filter { (errorCode, _) -> errorCode != 0 }
+                    // Повертаємо позиції помилкових біті та відкидуєм біт перевірки
                     .map { (_, position) ->
                         println("Помилка на позиції ${position + 1}")
                         position
