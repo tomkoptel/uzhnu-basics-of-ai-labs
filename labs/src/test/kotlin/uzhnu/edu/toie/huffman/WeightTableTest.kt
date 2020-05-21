@@ -5,19 +5,22 @@ import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.specification.describe
 
 object WeightTableTest : Spek({
-    describe("buildBinaryDictionary") {
-        it("create binary dictionary for simple case") {
+    describe("перевіряємо метод створення мапи 'символ' та 'бінарне слово'") {
+        it("простий випадок") {
             val frequencies = mapOf(
                 'E' to 15,
                 'S' to 3
             )
             val queue = WeightTable.create(frequencies)
+            /**
+             * Як ми бачимо символ 'S' отрима 0 та символ 'E' 1 в якості слова
+             */
             queue.buildBinaryDictionary() shouldBeEqualTo mapOf(
                 'S' to "0",
                 'E' to "1"
             )
         }
-        it("create binary dictionary for complex case") {
+        it("складний випадок") {
             val frequencies = mapOf(
                 'A' to 10,
                 'E' to 15,
@@ -28,6 +31,9 @@ object WeightTableTest : Spek({
                 '0' to 1
             )
             val queue = WeightTable.create(frequencies)
+            /**
+             * Як ми бачимо символ 'P', 'E', 'I' мають найкоротше бінарне слово
+             */
             queue.buildBinaryDictionary() shouldBeEqualTo mapOf(
                 'I' to "00",
                 'P' to "01",
@@ -40,8 +46,8 @@ object WeightTableTest : Spek({
         }
     }
 
-    describe("create") {
-        it("should build priority queue based on weights") {
+    describe("створення таблиці") {
+        it("черга має бути відсортована від найменшого до найбільшого значення") {
             val frequencies = mapOf(
                 'E' to 15,
                 'S' to 3
@@ -52,8 +58,8 @@ object WeightTableTest : Spek({
         }
     }
 
-    describe("buildTreeHead") {
-        it("should build a tree 18 -> (E, 15), (S, 3)") {
+    describe("створення бінарного дерева") {
+        it("випадок 18 -> (E, 15), (S, 3)") {
             val frequencies = mapOf(
                 'E' to 15,
                 'S' to 3
@@ -67,7 +73,7 @@ object WeightTableTest : Spek({
             )
         }
 
-        it("should build a complex balanced tree") {
+        it("випадок складного дерева з вагою 58") {
             val frequencies = mapOf(
                 'A' to 10,
                 'E' to 15,
