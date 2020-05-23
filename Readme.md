@@ -19,6 +19,9 @@
 - [prolog-lab](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/prolog-lab) лабораторна робота з мови програмування Prolog
 - [Сирцевий код реалізації фатичного діалогу](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/main/kotlin/uzhnu/edu/bai/dialog) та [тести](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/test/kotlin/uzhnu/edu/bai/dialog)
 
+# Теорія інформації та кодування
+- [Білет 7 Задача про добуток випадкових цілих чисел](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/test/kotlin/uzhnu/edu/toie/huffman/WeightTableTest.kt)
+
 # Курсова робота
 Дослідження особливостей кросс-платформенних розробок під Android та iOS з використанням Kotlin/Native for Native
 - [app](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/app) - сирцевий код Android додатку
