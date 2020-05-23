@@ -20,7 +20,7 @@
 - [Сирцевий код реалізації фатичного діалогу](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/main/kotlin/uzhnu/edu/bai/dialog) та [тести](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/test/kotlin/uzhnu/edu/bai/dialog)
 
 # Теорія інформації та кодування
-- [Білет 7 Задача про добуток випадкових цілих чисел](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/test/kotlin/uzhnu/edu/toie/huffman/WeightTableTest.kt)
+- [Білет 7 Задача про добуток випадкових цілих чисел](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/test/kotlin/uzhnu/edu/mos/RandomGeneratorTest.kt)
 
 # Курсова робота
 Дослідження особливостей кросс-платформенних розробок під Android та iOS з використанням Kotlin/Native for Native
