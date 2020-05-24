@@ -1,0 +1,19 @@
+@startuml
+skinparam activity {
+  BackgroundColor<< Coral >> Coral
+  BackgroundColor<< Blue >> LightBlue
+  BackgroundColor<< Green >> LightGreen
+}
+
+(*) --> "ios"
+(*) --> "app"
+"app" --> "shared" << Coral >>
+ios --> "shared"
+"shared" --> "androidMain" << Blue >>
+"androidMain" --> androidTest << Green >>
+"shared" --> "commonMain" << Blue >>
+"commonMain" --> "commonTest" << Green >>
+"shared" --> "iosMain" << Blue >>
+iosMain --> "iosMainTest" << Green >>
+
+@enduml

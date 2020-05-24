@@ -1,0 +1,13 @@
+@startuml
+skinparam activity {
+  BackgroundColor<< Coral >> Coral
+  BackgroundColor<< Blue >> LightBlue
+  BackgroundColor<< Green >> LightGreen
+}
+
+(*) --> "Рівень презентації"
+"Рівень презентації" --> "Загальна логіка (shared/domain)" << Coral >>
+"Загальна логіка (shared/domain)" --> "Рівень даних (data)" << Blue >>
+"Рівень даних (data)" --> "Виклики мережі (api)" << Green >>
+"Рівень даних (data)" --> "Кешування (DB/File System)" << Green >>
+@enduml
