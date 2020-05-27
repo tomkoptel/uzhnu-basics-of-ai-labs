@@ -1,5 +1,9 @@
 ![Java CI with Gradle](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/workflows/Java%20CI%20with%20Gradle/badge.svg)
 
+# Методика викладання інформатики
+[Рішення задачі](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/main/java/uzhnu/edu/informatics/Tasks.java) `Задача. Дано масив M, розмірністю 11. Знайти найбільший елемент масиву та його номер. Вивести на екран значення подвоєної суми елементів масиву.`
+[Тести до задачі](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/test/kotlin/uzhnu/edu/informatics/TasksTest.kt).
+
 # Теорія інформації і кодування
 - Алгоритм компресії Кодом Гаффмана. [Сирцевий код](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/tree/master/labs/src/main/kotlin/uzhnu/edu/toie/huffman). [Тести](https://github.com/tomkoptel/uzhnu-basics-of-ai-labs/blob/master/labs/src/test/kotlin/uzhnu/edu/toie/huffman/WeightTableTest.kt).
 ![huffman_test.png](images/huffman_test.png "huffman_test.png")
